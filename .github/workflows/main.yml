@@ -1,0 +1,46 @@
+name: bug-wars-backend-GH-actions
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - task/dockerfile
+
+        # Adjust to your main branch name
+
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'  # Adjust to the version you are using
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: |
+            bug-wars-backend: 4ddb217eb819c56b0260b09a17f560fca2bbd6e7e0290f67919c289cc67868c1  # Replace with your Docker image tag
+
+      - name: Deploy to Render
+        run: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push your-docker-registry/your-app:latest
+          curl -X POST -H "Authorization: Bearer ${{ secrets.RENDER_TOKEN }}" -H "Content-Type: application/json" -d '{"branch": "main"}' https://render.com/api/v1/deploys
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
