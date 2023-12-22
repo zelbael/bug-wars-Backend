@@ -46,25 +46,25 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.8.2</version>
+
 			<scope>test</scope>
 		</dependency>
 
-<!--		&lt;!&ndash; JUnit Jupiter Engine &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.junit.jupiter</groupId>-->
-<!--			<artifactId>junit-jupiter-engine</artifactId>-->
+		<!-- JUnit Jupiter Engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
 
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
+			<scope>test</scope>
+		</dependency>
 
-<!--		&lt;!&ndash; Spring Boot Test Starter &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-test</artifactId>-->
-<!--			<version>3.2.0</version> &lt;!&ndash; Use the version compatible with your Spring Boot version &ndash;&gt;-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
+		<!-- Spring Boot Test Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
