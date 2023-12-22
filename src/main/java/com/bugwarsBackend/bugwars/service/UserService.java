@@ -10,16 +10,14 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    public UserService() {
-        userRepository = null;
-    }
+    public UserService() { }
 
     public void saveUser(String firstName, String lastName, String username, String password) {
         User user = new User();
