@@ -8,6 +8,9 @@ import lombok.Data;
 @Table(name = "users")
 public class User {
 
+    public User() {
+    }
+
     public User(long user_id, String firstName, String username) {
         this.user_id = user_id;
         this.firstName = firstName;
