@@ -8,10 +8,10 @@ import lombok.Data;
 @Table(name = "users")
 public class User {
 
-    public User(long user_id, String firstName, String lastName) {
+    public User(long user_id, String firstName, String username) {
         this.user_id = user_id;
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.username = username;
     }
 
     public User(long user_id, String firstName, String lastName, String username, String password) {
