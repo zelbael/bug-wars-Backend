@@ -50,21 +50,21 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- JUnit Jupiter Engine -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
+<!--		&lt;!&ndash; JUnit Jupiter Engine &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.junit.jupiter</groupId>-->
+<!--			<artifactId>junit-jupiter-engine</artifactId>-->
 
-			<scope>test</scope>
-		</dependency>
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
-		<!-- Spring Boot Test Starter -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<version>3.2.0</version> <!-- Use the version compatible with your Spring Boot version -->
-			<scope>test</scope>
-		</dependency>
+<!--		&lt;!&ndash; Spring Boot Test Starter &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-test</artifactId>-->
+<!--			<version>3.2.0</version> &lt;!&ndash; Use the version compatible with your Spring Boot version &ndash;&gt;-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 
 	</dependencies>
 
@@ -82,19 +82,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version> <!-- Adjust the version if needed -->
-				<dependencies>
-					<dependency>
-						<groupId>org.junit.jupiter</groupId>
-						<artifactId>junit-jupiter-engine</artifactId>
-						<version>5.8.2</version> <!-- Use the appropriate version -->
-					</dependency>
-					<!-- Other dependencies if needed -->
-				</dependencies>
-			</plugin>
+
 		</plugins>
 	</build>
 </project>
