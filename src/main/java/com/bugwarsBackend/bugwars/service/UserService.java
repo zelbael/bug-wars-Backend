@@ -17,6 +17,10 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public UserService() {
+        userRepository = null;
+    }
+
     public void saveUser(String firstName, String lastName, String username, String password) {
         User user = new User();
         user.setFirstName(firstName);
